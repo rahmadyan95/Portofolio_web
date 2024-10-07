@@ -1,6 +1,9 @@
 import './App.css';
 import logo from './assets/logo.png';
 import menulogo from './assets/menu.png';
+import { FaBeer,  } from 'react-icons/fa';
+
+
 
 function Menu(e: React.MouseEvent<HTMLImageElement>) {
   const list = document.querySelector('ul');
@@ -34,6 +37,9 @@ function App() {
               data-status="menu" // Using a data attribute
               onClick={(e) => Menu(e)}
             />
+
+            
+            
           </span>
         </div>
 
