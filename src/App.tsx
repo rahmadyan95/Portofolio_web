@@ -12,18 +12,18 @@ function Menu(e: React.MouseEvent<HTMLImageElement>) {
 
   if (menuStatus === 'menu') {
     target.setAttribute('data-status', 'close');
-    list?.classList.add('top-[80px]', 'opacity-100');
+    list?.classList.add('top-[80px]', 'opacity-100','z-[10]');
   } else {
     target.setAttribute('data-status', 'menu');
-    list?.classList.remove('top-[80px]', 'opacity-100');
+    list?.classList.remove('top-[80px]', 'opacity-100','z-[10[');
   }
 }
 
 function App() {
   return (
-    <div className='bg-greybackground'>
+    <div className=''>
       <nav className='p-5 bg-greybackground shadow md:flex md:items-center md:justify-between'>
-        <div className='flex justify-between items-center'>
+        <div className='flex justify-between items-center md:ml-4'>
           <span className='text-2xl font-fira cursor-pointer text-white'>
             <img src={logo} alt="logo" className="inline h-11 mr-2" />
             Rahmadyan
@@ -75,6 +75,13 @@ function App() {
           </li>
         </ul>
       </nav>
+
+      <div className="bg-greybackground p-10 min-h-screen">
+        <h1 className="text-3xl text-center white font-bold mb-5">Welcome to Rahmadyan's Website</h1>
+        <p className="text-lg text-gray-700 text-center">
+          This is the body content of the website. Here, you can add more sections such as an introduction, portfolio, and contact information.
+        </p>
+      </div>
     </div>
   );
 }
