@@ -37,9 +37,6 @@ function App() {
               data-status="menu" // Using a data attribute
               onClick={(e) => Menu(e)}
             />
-
-            
-            
           </span>
         </div>
 
@@ -76,11 +73,12 @@ function App() {
         </ul>
       </nav>
 
-      <div className="bg-greybackground p-10 min-h-screen">
-        <h1 className="text-3xl text-center white font-bold mb-5">Welcome to Rahmadyan's Website</h1>
-        <p className="text-lg text-gray-700 text-center">
-          This is the body content of the website. Here, you can add more sections such as an introduction, portfolio, and contact information.
+      <div className="bg-greybackground p-5 min-h-screen flex flex-col justify-start items-left">
+        <h1 className="text-4xl text-white font-bold font-fira">Rahmadyan is a</h1>
+        <p className="text-4xl text-white font-fira">
+          <span className="text-purple-400">Software Engineer</span> and <span className="text-purple-400">Data Science</span>
         </p>
+        <h1 className="text-4xl text-white font-bold font-fira">Student</h1>
       </div>
     </div>
   );
