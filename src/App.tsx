@@ -49,21 +49,21 @@ function App() {
           </li>
 
           <li className='mx-4 my-5 md:my-0'>
-            <a href="#" className="flex items-center">
+            <a href="#home" className="flex items-center">
               <span className="text-purple-600">#</span>
               <span className="text-white hover:text-purple-600">works</span>
             </a>
           </li>
 
           <li className='mx-4 my-5 md:my-0'>
-            <a href="#" className="flex items-center">
+            <a href="#home" className="flex items-center">
               <span className="text-purple-600">#</span>
               <span className="text-white hover:text-purple-600">about-me</span>
             </a>
           </li>
 
           <li className='mx-4 my-5 md:my-0'>
-            <a href="#" className="flex items-center">
+            <a href="#home" className="flex items-center">
               <span className="text-purple-600">#</span>
               <span className="text-white hover:text-purple-600">contacts</span>
             </a>
