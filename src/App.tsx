@@ -127,7 +127,7 @@ function App() {
       <div className="absolute inset-0 bg-greybackground opacity-0 z-0"></div>
     </div>
     <a 
-      href="/path-to-your-cv.pdf" // Replace with the actual path to your CV
+      href="https://drive.google.com/file/d/1VHGt3z-VfRIMG_g_QwW5AY_f_jjnL-Bp/view?usp=sharing" // Replace with the actual path to your CV
       target="_blank"
       rel="noopener noreferrer"
       className="mt-5 bg-transparent border-2 border-violet-400 text-white font-bold font-fira text-center py-2 px-4 rounded hover:bg-violet-400 hover:text-gray-900 transition duration-500"
