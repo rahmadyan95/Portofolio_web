@@ -49,7 +49,7 @@ function App() {
           </li>
 
           <li className='mx-4 my-5 md:my-0'>
-            <a href="#home" className="flex items-center">
+            <a href="#works" className="flex items-center">
               <span className="text-purple-600">#</span>
               <span className="text-white hover:text-purple-600">works</span>
             </a>
@@ -104,72 +104,101 @@ function App() {
 
         {/* Combined container for Image, Text, and Currently Working On */}
         <div className="flex flex-col lg:flex-row items-center lg:items-start lg:ml-[50px]">
-  {/* Lenpm i @tsparticles/reactft side: Image */}
-  <img src={require('./assets/myphoto.png')} alt="profile" className="mt-0 w-[520px] h-[520px] hidden lg:block lg:mr-5" />
+        {/* Lenpm i @tsparticles/reactft side: Image */}
+        <img src={require('./assets/myphoto.png')} alt="profile" className="mt-0 w-[520px] h-[520px] hidden lg:block lg:mr-5" />
 
-  {/* Right side: Text content and Currently Working On */}
-  <div className="flex flex-col items-center lg:items-start lg:ml-5 lg:w-[800px] lg:pr-5 lg:mt-10"> {/* Set a wider width for the text container */}
-    <h1 className="text-3xl text-white font-bold font-fira mb-2">
-      Rahmadyan is a
-    </h1>
-    <p className="text-3xl text-white font-fira text-center lg:text-left mb-3">
-      <span className="text-purple-400">Software Engineer</span> and <span className="text-purple-400">Data Science</span> <span className="text-white">Student</span>
-    </p>
-    <h1 className="text-1xl text-gray-300 font-fira text-center lg:text-left mb-5">
-      Crafting innovative solutions where data science meets software engineering
-    </h1>
+        {/* Right side: Text content and Currently Working On */}
+        <div className="flex flex-col items-center lg:items-start lg:ml-5 lg:w-[800px] lg:pr-5 lg:mt-10"> {/* Set a wider width for the text container */}
+          <h1 className="text-3xl text-white font-bold font-fira mb-2">
+            Rahmadyan is a
+          </h1>
+          <p className="text-3xl text-white font-fira text-center lg:text-left mb-3">
+            <span className="text-purple-400">Software Engineer</span> and <span className="text-purple-400">Data Science</span> <span className="text-white">Student</span>
+          </p>
+          <h1 className="text-1xl text-gray-300 font-fira text-center lg:text-left mb-5">
+            Crafting innovative solutions where data science meets software engineering
+          </h1>
 
-    {/* The box for 'Currently working on' */}
-    <div className="p-3 border-2 border-white text-center relative flex justify-center items-center w-full lg:w-[400px] h-auto lg:mt-1">
-      <h2 className="text-white text-xl z-10 font-fira">
-        Currently working on <span className="text-purple-400 font-bold">{projectName}</span>
-      </h2>
-      <div className="absolute inset-0 bg-greybackground opacity-0 z-0"></div>
-    </div>
-    <a 
-      href="https://drive.google.com/file/d/1VHGt3z-VfRIMG_g_QwW5AY_f_jjnL-Bp/view?usp=sharing" // Replace with the actual path to your CV
-      target="_blank"
-      rel="noopener noreferrer"
-      className="mt-5 bg-transparent border-2 border-violet-400 text-white font-bold font-fira text-center py-2 px-4 rounded hover:bg-violet-400 hover:text-gray-900 transition duration-500"
-    >
-      Download CV
-    </a>
-    
-    {/* Social media logos for mobile only */}
-    <div className="flex justify-center mt-4 md:hidden"> {/* Only show on mobile */}
-      {/* GitHub Logo */}
-      <a href="https://github.com/rahmadyan95" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110 mx-2">
-        <img
-          src={require('./assets/logo_github.png')}
-          alt="GitHub Logo"
-          className="h-10 w-10 rounded-full"
-        />
-      </a>
+          {/* The box for 'Currently working on' */}
+          <div className="p-3 border-2 border-white text-center relative flex justify-center items-center w-full lg:w-[400px] h-auto lg:mt-1">
+            <h2 className="text-white text-xl z-10 font-fira">
+              Currently working on <span className="text-purple-400 font-bold">{projectName}</span>
+            </h2>
+            <div className="absolute inset-0 bg-greybackground opacity-0 z-0"></div>
+          </div>
+          <a 
+            href="https://drive.google.com/file/d/1VHGt3z-VfRIMG_g_QwW5AY_f_jjnL-Bp/view?usp=sharing" // Replace with the actual path to your CV
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 bg-transparent border-2 border-violet-400 text-white font-bold font-fira text-center py-2 px-4 rounded hover:bg-violet-400 hover:text-gray-900 transition duration-500"
+          >
+            Download CV
+          </a>
+          
+            {/* Social media logos for mobile only */}
+            <div className="flex justify-center mt-4 md:hidden"> {/* Only show on mobile */}
+              {/* GitHub Logo */}
+              <a href="https://github.com/rahmadyan95" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110 mx-2">
+                <img
+                  src={require('./assets/logo_github.png')}
+                  alt="GitHub Logo"
+                  className="h-10 w-10 rounded-full"
+                />
+              </a>
 
-      {/* Instagram Logo */}
-      <a href="https://www.instagram.com/haekal_rahmadyan/profilecard/?igsh=MWxscWVmYjg3enNwYw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110 mx-2">
-        <img
-          src={require('./assets/instagram_logo.png')}
-          alt="Instagram Logo"
-          className="h-8 w-8"
-        />
-      </a>
+              {/* Instagram Logo */}
+              <a href="https://www.instagram.com/haekal_rahmadyan/profilecard/?igsh=MWxscWVmYjg3enNwYw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110 mx-2">
+                <img
+                  src={require('./assets/instagram_logo.png')}
+                  alt="Instagram Logo"
+                  className="h-8 w-8"
+                />
+              </a>
 
-      {/* LinkedIn Logo */}
-      <a href="https://www.linkedin.com/in/haekal-rahmadyan-174506271/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110 mx-2">
-        <img
-          src={require('./assets/linkedin_logo.png')}
-          alt="LinkedIn Logo"
-          className="h-8 w-8"
-        />
-      </a>
-    </div>
-  </div>
-</div>
+              {/* LinkedIn Logo */}
+              <a href="https://www.linkedin.com/in/haekal-rahmadyan-174506271/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110 mx-2">
+                <img
+                  src={require('./assets/linkedin_logo.png')}
+                  alt="LinkedIn Logo"
+                  className="h-8 w-8"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
 
 
         <img src={require('./assets/myphoto.png')} alt="profile" className="mt-5 w-83 h-83 lg:hidden" />
       </div>
+
+      {/* {WORKS SECTOR} */}
+      
+      <div id="works" className="bg-greybackground p-5 min-h-screen flex flex-col items-center lg:items-start">
+        <h2 className="text-3xl text-white font-bold font-fira mb-8">My Works</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg">
+            <h3 className="text-xl font-fira text-white mb-2">Project 1: Drone Control System</h3>
+            <p className="text-gray-400 font-fira">A ground control system for drones that allows real-time video feed, altitude monitoring, and precise control.</p>
+          </div>
+
+          <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg">
+            <h3 className="text-xl font-fira text-white mb-2">Project 2: Crack Detection Model</h3>
+            <p className="text-gray-400 font-fira">A machine learning model using YOLOv8 to detect cracks on aircraft surfaces with high accuracy.</p>
+          </div>
+
+          <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg">
+            <h3 className="text-xl font-fira text-white mb-2">Project 3: Portfolio Website</h3>
+            <p className="text-gray-400 font-fira">A personal portfolio website built using React and Tailwind CSS, showcasing various projects and experiences.</p>
+          </div>
+
+          {/* Add more projects as needed */}
+        </div>
+      </div>
+
+
+
+
     </div>
   );
 }
