@@ -104,7 +104,7 @@ function App() {
 
         {/* Combined container for Image, Text, and Currently Working On */}
         <div className="flex flex-col lg:flex-row items-center lg:items-start lg:ml-[50px]">
-  {/* Left side: Image */}
+  {/* Lenpm i @tsparticles/reactft side: Image */}
   <img src={require('./assets/myphoto.png')} alt="profile" className="mt-0 w-[520px] h-[520px] hidden lg:block lg:mr-5" />
 
   {/* Right side: Text content and Currently Working On */}
