@@ -83,7 +83,7 @@ function App() {
         <div className="w-[3px] bg-[#ABB2BF] h-[180px] absolute top-[40px] left-[64px] hidden lg:flex flex-col items-center justify-between"></div>
         <div className="hidden lg:flex flex-col items-center lg:items-start lg:ml-5 lg:mt-[125px] w-full lg:w-auto">
           {/* GitHub Logo as Button */}
-          <a href="https://github.com/rahmadyan95" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
+          <a href="https://github.com/rahmadyan95" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
             <img
               src={require('./assets/logo_github.png')}
               alt="GitHub Logo"
@@ -92,7 +92,7 @@ function App() {
           </a>
 
           {/* Instagram Logo as Button */}
-          <a href="https://www.instagram.com/haekal_rahmadyan/profilecard/?igsh=MWxscWVmYjg3enNwYw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
+          <a href="https://www.instagram.com/haekal_rahmadyan/profilecard/?igsh=MWxscWVmYjg3enNwYw%3D%3D" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
             <img
               src={require('./assets/instagram_logo.png')}
               alt="Instagram Logo"
@@ -101,7 +101,7 @@ function App() {
           </a>
 
           {/* LinkedIn Logo as Button */}
-          <a href="https://www.linkedin.com/in/haekal-rahmadyan-174506271/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
+          <a href="https://www.linkedin.com/in/haekal-rahmadyan-174506271/" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
             <img
               src={require('./assets/linkedin_logo.png')}
               alt="LinkedIn Logo"
@@ -136,7 +136,7 @@ function App() {
           </div>
           <a 
             href="https://drive.google.com/file/d/1VHGt3z-VfRIMG_g_QwW5AY_f_jjnL-Bp/view?usp=sharing" // Replace with the actual path to your CV
-            target="_blank"
+          
             rel="noopener noreferrer"
             className="mt-5 bg-transparent border-2 border-violet-400 text-white font-bold font-fira text-center py-2 px-4 rounded hover:bg-violet-400 hover:text-gray-900 transition duration-500"
           >
@@ -146,7 +146,7 @@ function App() {
             {/* Social media logos for mobile only */}
             <div className="flex justify-center mt-4 md:hidden"> {/* Only show on mobile */}
               {/* GitHub Logo */}
-              <a href="https://github.com/rahmadyan95" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110 mx-2">
+              <a href="https://github.com/rahmadyan95" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110 mx-2">
                 <img
                   src={require('./assets/logo_github.png')}
                   alt="GitHub Logo"
@@ -155,7 +155,7 @@ function App() {
               </a>
 
               {/* Instagram Logo */}
-              <a href="https://www.instagram.com/haekal_rahmadyan/profilecard/?igsh=MWxscWVmYjg3enNwYw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110 mx-2">
+              <a href="https://www.instagram.com/haekal_rahmadyan/profilecard/?igsh=MWxscWVmYjg3enNwYw%3D%3D" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110 mx-2">
                 <img
                   src={require('./assets/instagram_logo.png')}
                   alt="Instagram Logo"
@@ -164,7 +164,7 @@ function App() {
               </a>
 
               {/* LinkedIn Logo */}
-              <a href="https://www.linkedin.com/in/haekal-rahmadyan-174506271/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110 mx-2">
+              <a href="https://www.linkedin.com/in/haekal-rahmadyan-174506271/" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110 mx-2">
                 <img
                   src={require('./assets/linkedin_logo.png')}
                   alt="LinkedIn Logo"
@@ -192,7 +192,7 @@ function App() {
         <div className="flex flex-col lg:flex-row items-center lg:items-start w-full">
           {/* Bagian Kiri: Text */}
           <div className="lg:w-1/2 w-full text-white mb-8 lg:mb-0 lg:pr-8 font-fira mt-8">
-            <a href="https://github.com/dekastra/GCS_Drone" rel="noopener noreferrer" target="_blank" className="text-5xl font-bold mb-1 text-violet-400 hover:underline">
+            <a href="https://github.com/dekastra/GCS_Drone" rel="noopener noreferrer" className="text-5xl font-bold mb-1 text-violet-400 hover:underline">
               Research Assistant
             </a>
             <p className="text-[22px] mb-0">Badan Riset Inovasi Nasional (BRIN)</p>
@@ -241,7 +241,7 @@ function App() {
 
             <div className="mt-6">
               <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
-                <a href="https://github.com/rahmadyan95/Pothole-Detector" rel="noopener noreferrer" target="_blank">View Project &larr;&rarr;</a>
+                <a href="https://github.com/rahmadyan95/Pothole-Detector" rel="noopener noreferrer">View Project &larr;&rarr;</a>
               </button>
             </div>
 
@@ -267,7 +267,7 @@ function App() {
 
             <div className="mt-6">
               <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
-                <a href="https://github.com/dekastra/GCS_Drone" rel="noopener noreferrer" target="_blank">View Project &larr;&rarr;</a>
+                <a href="https://github.com/dekastra/GCS_Drone" rel="noopener noreferrer">View Project &larr;&rarr;</a>
               </button>
             </div>
           
@@ -295,7 +295,7 @@ function App() {
 
             <div className="mt-10">
               <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
-                <a href="https://github.com/dekastra/GCS_Drone" rel="noopener noreferrer" target="_blank">View Project &larr;&rarr;</a>
+                <a href="https://github.com/dekastra/GCS_Drone" rel="noopener noreferrer">View Project &larr;&rarr;</a>
               </button>
             </div>
           
@@ -320,7 +320,7 @@ function App() {
 
             <div className="mt-10">
               <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
-                <a href="https://github.com/dekastra/GCS_Drone" rel="noopener noreferrer" target="_blank">View Project &larr;&rarr;</a>
+                <a href="https://github.com/dekastra/GCS_Drone" rel="noopener noreferrer">View Project &larr;&rarr;</a>
               </button>
             </div>
           </div>
@@ -346,11 +346,11 @@ function App() {
             
             <div className="mt-10">
               <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300 mr-2" >
-                <a href="https://github.com/rahmadyan95/Portofolio_web" rel="noopener noreferrer" target="_blank" className=''>View Project &larr;&rarr;</a>
+                <a href="https://github.com/rahmadyan95/Portofolio_web" rel="noopener noreferrer" className=''>View Project &larr;&rarr;</a>
               </button>
 
               <button className="border-2 border-gray-500 text-white font-fira py-2 px-2 rounded hover:bg-purple-500 hover:text-white transition duration-300" >
-                <a href="https://portofolio-web-rho.vercel.app/" rel="noopener noreferrer" target="_blank" className=''>Live &larr;&rarr;</a>
+                <a href="https://portofolio-web-rho.vercel.app/" rel="noopener noreferrer" className=''>Live &larr;&rarr;</a>
               </button>
             </div>
         
@@ -376,7 +376,7 @@ function App() {
 
             <div className="mt-5">
               <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
-                <a href="https://github.com/rahmadyan95/Emergency-Autoresponder" rel="noopener noreferrer" target="_blank">View Project &larr;&rarr;</a>
+                <a href="https://github.com/rahmadyan95/Emergency-Autoresponder" rel="noopener noreferrer">View Project &larr;&rarr;</a>
               </button>
             </div>
           </div>
@@ -396,7 +396,7 @@ function App() {
 
             <div className="mt-5">
               <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
-                <a href="https://github.com/rahmadyan95/Simple-Hangman" rel="noopener noreferrer" target="_blank">View Project &larr;&rarr;</a>
+                <a href="https://github.com/rahmadyan95/Simple-Hangman" rel="noopener noreferrer">View Project &larr;&rarr;</a>
               </button>
             </div>
           </div>
@@ -420,7 +420,7 @@ function App() {
 
             <div className="mt-5">
               <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
-                <a href="https://github.com/rahmadyan95/Simple-Hangman" rel="noopener noreferrer" target="_blank">View Project &larr;&rarr;</a>
+                <a href="https://github.com/rahmadyan95/Simple-Hangman" rel="noopener noreferrer">View Project &larr;&rarr;</a>
               </button>
             </div>
           </div>
@@ -445,7 +445,7 @@ function App() {
 
     {/* Bagian Kanan: Text */}
     <div className="lg:w-1/2 w-full text-white mb-8 lg:mb-0 lg:pl-8 font-fira mt-8">
-      <a target="_blank" className="text-5xl font-bold mb-1 text-violet-400 hover:underline">
+      <a className="text-5xl font-bold mb-1 text-violet-400 hover:underline">
         Haekal Rahmadyan
       </a>
       <p className="text-[22px] mb-0">Bina Nusantara University (Undergraduate)</p>
@@ -457,17 +457,6 @@ function App() {
     </div>
   </div>
 </div>
-
-
-
-      
-
-      
-
-
-
-
-
     </div>
   );
 }
