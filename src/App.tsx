@@ -445,7 +445,7 @@ function App() {
 
     {/* Bagian Kanan: Text */}
     <div className="lg:w-1/2 w-full text-white mb-8 lg:mb-0 lg:pl-8 font-fira mt-8">
-      <a href="" target="_blank" className="text-5xl font-bold mb-1 text-violet-400 hover:underline">
+      <a target="_blank" className="text-5xl font-bold mb-1 text-violet-400 hover:underline">
         Haekal Rahmadyan
       </a>
       <p className="text-[22px] mb-0">Bina Nusantara University (Undergraduate)</p>
