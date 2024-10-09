@@ -203,7 +203,8 @@ function App() {
 
           {/* Bagian Kanan: Foto */}
           <div className="lg:w-1/2 w-full flex justify-center lg:justify-end">
-            <img src={require('./assets/foto.png')} alt="Experience Photo" className="rounded-lg lg:w-[1200px]" />
+            <img src={require('./assets/foto.png')} className="rounded-lg lg:w-[1200px]"
+            alt='foto pesawat' />
           </div>
         </div>
       </div>
@@ -440,14 +441,14 @@ function App() {
   <div className="flex flex-col lg:flex-row items-center lg:items-start w-full">
     {/* Bagian Kiri: Foto */}
     <div className="lg:w-1/2 w-full flex justify-center lg:justify-start">
-      <img src={require('./assets/foto.png')} alt="Experience Photo" className="rounded-lg lg:w-[1200px]" />
+      <img src={require('./assets/foto.png')} alt='fotosaya'className="rounded-lg lg:w-[1200px]" />
     </div>
 
     {/* Bagian Kanan: Text */}
     <div className="lg:w-1/2 w-full text-white mb-8 lg:mb-0 lg:pl-8 font-fira mt-8">
-      <a rel="noopener noreferrer" target="_blank" className="text-5xl font-bold mb-1 text-violet-400 hover:underline">
+      <h3 rel="noopener noreferrer"  className="text-5xl font-bold mb-1 text-violet-400 hover:underline">
         Haekal Rahmadyan
-      </a>
+      </h3>
       <p className="text-[22px] mb-0">Bina Nusantara University (Undergraduate)</p>
       <p className="mb-8">Bandung, September 2023 - August 2024</p>
       <p className="mb-2">
@@ -462,10 +463,7 @@ function App() {
 
       
 
-      
-
-
-
+  
     </div>
   );
 }
