@@ -18,7 +18,7 @@ let projectName = "Portfolio";
 
 function App() {
   return (
-    <div className=''>
+    <div id='main' className=' bg-greybackground shadow'>
       {/* Sticky Header */}
       <nav className='p-5 bg-greybackground shadow md:flex md:items-center md:justify-between sticky top-0 z-20'>
         <div className='flex justify-between items-center md:ml-4'>
@@ -42,7 +42,7 @@ function App() {
           md:static absolute bg-greybackground w-full left-0 md:w-auto md:py-0 py-4 md:pl-0
           pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500'>
           <li className='mx-4 my-5 md:my-0 '>
-            <a href="#home" className="">
+            <a href="#main" className="">
               <span className="text-purple-600">#</span>
               <span className="text-white hover:text-purple-600">home</span>
             </a>
@@ -169,30 +169,51 @@ function App() {
 
 
         <img src={require('./assets/myphoto.png')} alt="profile" className="mt-5 w-83 h-83 lg:hidden" />
+      
+      
       </div>
 
       {/* {WORKS SECTOR} */}
-      
-      <div id="works" className="bg-greybackground p-5 min-h-screen flex flex-col items-center lg:items-start">
-        <h2 className="text-3xl text-white font-bold font-fira mb-8">My Works</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div id="works" className="p-5 min-h-screen flex flex-col items-center lg:items-start mx-[40px]">
+          <h2 className="relative text-3xl text-white font-fira mb-8 flex items-center w-full">
+            <span className="flex-grow border-t border-violet-400"></span>
+            <span className="mx-4 flex-shrink">
+              <span className="text-violet-400">#</span>Projects
+            </span>
+            <span className="flex-grow border-t border-violet-400"></span>
+          </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg">
+              <img
+              src={require('./assets/pothole_detector.png')}
+              alt="Project 1 Thumbnail"
+              className="mb-4 w-full h-auto rounded-lg"
+              />
+            <h3 className="text-xl font-fira text-white mb-2">Pothole Detector</h3>
+            <p className="text-gray-400 font-fira ">A ground control system for drones that allows real-time video feed, altitude monitoring, and precise control.</p>
+            <div className='mt-4 flex flex-wrap gap-1'>
+              <img className="" src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" alt="Python"></img>
+              <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="TensorFlow"></img>
+            </div>
+          </div>
+
+          <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg">
+              <img
+              src={require('./assets/pothole_detector.png')}
+              alt="Project 1 Thumbnail"
+              className="mb-4 w-full h-auto rounded-lg"
+              />
             <h3 className="text-xl font-fira text-white mb-2">Project 1: Drone Control System</h3>
             <p className="text-gray-400 font-fira">A ground control system for drones that allows real-time video feed, altitude monitoring, and precise control.</p>
           </div>
 
-          <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg">
-            <h3 className="text-xl font-fira text-white mb-2">Project 2: Crack Detection Model</h3>
-            <p className="text-gray-400 font-fira">A machine learning model using YOLOv8 to detect cracks on aircraft surfaces with high accuracy.</p>
-          </div>
 
-          <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg">
-            <h3 className="text-xl font-fira text-white mb-2">Project 3: Portfolio Website</h3>
-            <p className="text-gray-400 font-fira">A personal portfolio website built using React and Tailwind CSS, showcasing various projects and experiences.</p>
-          </div>
-
-          {/* Add more projects as needed */}
         </div>
       </div>
 
