@@ -206,7 +206,7 @@ function App() {
 
             <div className="mt-6">
               <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
-                <a href="https://github.com/rahmadyan95/Pothole-Detector">View Project &larr;&rarr;</a>
+                <a href="https://github.com/rahmadyan95/Pothole-Detector" target="_blank">View Project &larr;&rarr;</a>
               </button>
             </div>
 
@@ -232,7 +232,7 @@ function App() {
 
             <div className="mt-6">
               <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
-                <a href="https://github.com/dekastra/GCS_Drone">View Project &larr;&rarr;</a>
+                <a href="https://github.com/dekastra/GCS_Drone" target="_blank">View Project &larr;&rarr;</a>
               </button>
             </div>
           
@@ -242,13 +242,114 @@ function App() {
           {/* {PROJECT 3} */}
           <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg">
               <img
-              src={require('./assets/drone.png')}
+              src={require('./assets/Dia.png')}
               alt="Project 1 Thumbnail"
               className="mb-4 w-full h-auto rounded-lg"
               />
-            <h3 className="text-xl font-fira text-white mb-2">Damage Detector on CN-235 Aircraft Body using drones with AI</h3>
-            <p className="text-gray-400 font-fira">A ground control system for drones that allows real-time video feed and altitude monitoring.</p>
+            <h3 className="text-xl font-fira text-white mb-2">DiaCheckApp</h3>
+            <p className="text-gray-400 font-fira">This app uses the XGBoost algorithm to classify diabetes indicators and integrates with the Gemini AI API for tailored recommendations.</p>
+
+            <div className='mt-4 flex flex-wrap gap-1'>
+              <img className="" src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" alt="Python"></img>
+              <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/google%20gemini-4285F4?style=for-the-badge&logo=google%20assistant&logoColor=white" alt="TensorFlow"></img>
+            </div>
+
+            <div className="mt-10">
+              <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
+                <a href="https://github.com/dekastra/GCS_Drone" target="_blank">View Project &larr;&rarr;</a>
+              </button>
+            </div>
+          
+          
+
           </div>
+
+          <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg">
+              <img
+              src={require('./assets/Earthquake.png')}
+              alt="Project 1 Thumbnail"
+              className="mb-4 w-full h-auto rounded-lg"
+              />
+            <h3 className="text-xl font-fira text-white mb-2">Earthquake Alarm</h3>
+            <p className="text-gray-400 font-fira">This app fetches data from the BMKG and integrates it with a Telegram bot for earthquake alerts. It refreshes every 30 seconds and sends spam alerts when an earthquake is detected.</p>
+
+            <div className='mt-4 flex flex-wrap gap-1'>
+              <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white" alt="Python"></img>
+              <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="TensorFlow"></img>
+              
+            </div>
+
+            <div className="mt-10">
+              <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
+                <a href="https://github.com/dekastra/GCS_Drone" target="_blank">View Project &larr;&rarr;</a>
+              </button>
+            </div>
+          </div>
+
+          <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg">
+              <img
+              src={require('./assets/porto_logo.png')}
+              alt="Project 1 Thumbnail"
+              className="mb-4 w-full h-auto rounded-lg"
+              />
+            <h3 className="text-xl font-fira text-white mb-2">Portofolio_Me</h3>
+            <p className="text-gray-400 font-fira">This is my portfolio, an application created to showcase the work I have done during my time at university.</p>
+
+            <div className='mt-4 flex flex-wrap gap-1'>
+              <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="Python"></img>
+              <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="TensorFlow"></img>
+            </div>
+
+            
+            <div className="mt-10">
+              <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300 mr-2" >
+                <a href="https://github.com/rahmadyan95/Portofolio_web" target="_blank" className=''>View Project &larr;&rarr;</a>
+              </button>
+
+              <button className="border-2 border-gray-500 text-white font-fira py-2 px-2 rounded hover:bg-purple-500 hover:text-white transition duration-300" >
+                <a href="https://portofolio-web-rho.vercel.app/" target="_blank" className=''>Live &larr;&rarr;</a>
+              </button>
+            </div>
+        
+          </div>
+          <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg">
+              <img
+              src={require('./assets/EAS.png')}
+              alt="Project 1 Thumbnail"
+              className="mb-2 w-50 h-auto rounded-lg bg-greybackground"
+              />
+            <h3 className="text-xl font-fira text-white mb-2">Earthquake Alarm</h3>
+            <p className="text-gray-400 font-fira">An emergency autoresponder using YOLOv8 detects collisions at intersections and instantly alerts nearby emergency services, reducing response time and improving road safety</p>
+
+            <div className='mt-4 flex flex-wrap gap-1'>
+              <img className="" src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" alt="Python"></img>
+              <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white" alt="TensorFlow"></img>
+            </div>
+
+            <div className="mt-5">
+              <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
+                <a href="https://github.com/rahmadyan95/Emergency-Autoresponder" target="_blank">View Project &larr;&rarr;</a>
+              </button>
+            </div>
+          </div>
+
+          
+
+
+          
 
             
 
