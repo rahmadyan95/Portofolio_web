@@ -50,6 +50,13 @@ function App() {
           </li>
 
           <li className='mx-4 my-5 md:my-0'>
+            <a href="#experience" className="flex items-center" >
+              <span className="text-purple-600">#</span>
+              <span className="text-white hover:text-purple-600">experience</span>
+            </a>
+          </li>
+
+          <li className='mx-4 my-5 md:my-0'>
             <a href="#works" className="flex items-center" >
               <span className="text-purple-600">#</span>
               <span className="text-white hover:text-purple-600">works</span>
@@ -170,9 +177,37 @@ function App() {
 
 
         <img src={require('./assets/myphoto.png')} alt="profile" className="mt-5 w-83 h-83 lg:hidden" />
-      
-      
+
       </div>
+      {/* {Experence } */}
+      <div id="experience" className="p-5 min-h-screen flex flex-col items-center lg:items-start mx-[40px]">
+        <h2 className="relative text-3xl text-white font-fira mb-8 flex items-center w-full">
+          <span className="flex-grow border-t border-violet-400"></span>
+          <span className="mx-4 flex-shrink">
+            <span className="text-violet-400">#</span>Experience
+          </span>
+          <span className="flex-grow border-t border-violet-400"></span>
+        </h2>
+
+        <div className="flex flex-col lg:flex-row items-center lg:items-start w-full">
+          {/* Bagian Kiri: Text */}
+          <div className="lg:w-1/2 w-full text-white mb-8 lg:mb-0 lg:pr-8 font-fira mt-8">
+            <a href="https://github.com/dekastra/GCS_Drone"  target="_blank" className="text-5xl font-bold mb-1 text-violet-400 hover:underline">
+              Research Assistant
+            </a>
+            <p className="text-[22px] mb-0">Badan Riset Inovasi Nasional (BRIN)</p>
+            <p className="mb-8">Bandung, September 2023 - August 2024</p>
+            <p className="mb-2">In a collaborative project between the Bandung Institute of Technology, Bina Nusantara University (BINUS), and Terra Drone, initiated by the National Research and Innovation Agency (BRIN), I served as an assistant researcher for the BINUS Bandung team. My role as a programmer involved developing the Ground Control System for micro drones, which are used to detect cracks or damage on the CN-235 aircraft body. I was also responsible for creating the camera interface for the drone and integrating the trained model using YOLO version 8 with the GUI I had developed.</p>
+            {/* Tambahkan konten teks lainnya di sini */}
+          </div>
+
+          {/* Bagian Kanan: Foto */}
+          <div className="lg:w-1/2 w-full flex justify-center lg:justify-end">
+            <img src={require('./assets/foto.png')} alt="Experience Photo" className="rounded-lg lg:w-[1200px]" />
+          </div>
+        </div>
+      </div>
+
 
       {/* {WORKS SECTOR} */}
 
@@ -346,16 +381,89 @@ function App() {
             </div>
           </div>
 
-          
+          <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg">
+              <img
+              src={require('./assets/Hangman.png')}
+              alt="Project 1 Thumbnail"
+              className="mb-2 w-50 h-auto rounded-lg bg-greybackground"
+              />
+            <h3 className="text-xl font-fira text-white mb-2">Hangman Games</h3>
+            <p className="text-gray-400 font-fira">The Hangman Game in C is a classic word-guessing game that challenges players to decipher a hidden word by guessing one letter at a time.</p>
+
+            <div className='mt-4 flex flex-wrap gap-1'>
+              <img className="" src="https://img.shields.io/badge/-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="Python"></img>
+            </div>
+
+            <div className="mt-5">
+              <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
+                <a href="https://github.com/rahmadyan95/Simple-Hangman" target="_blank">View Project &larr;&rarr;</a>
+              </button>
+            </div>
+          </div>
 
 
-          
+          <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg">
+              <img
+              src={require('./assets/sortalgo.png')}
+              alt="Project 1 Thumbnail"
+              className="mb-2 w-50 h-auto rounded-lg bg-greybackground"
+              />
+            <h3 className="text-xl font-fira text-white mb-2">Sorting Algorithm Visualization</h3>
+            <p className="text-gray-400 font-fira">This is an application that implements several sorting algorithms, visualizing the sorting process.</p>
 
-            
+            <div className='mt-4 flex flex-wrap gap-1'>
+              <img className="" src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" alt="Python"></img>
+              <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="TensorFlow"></img>
+            </div>
 
+            <div className="mt-5">
+              <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
+                <a href="https://github.com/rahmadyan95/Simple-Hangman" target="_blank">View Project &larr;&rarr;</a>
+              </button>
+            </div>
+          </div>
 
         </div>
       </div>
+
+      <div id="experience" className="p-5 min-h-screen flex flex-col items-center lg:items-start mx-[40px]">
+  <h2 className="relative text-3xl text-white font-fira mb-8 flex items-center w-full">
+    <span className="flex-grow border-t border-violet-400"></span>
+    <span className="mx-4 flex-shrink">
+      <span className="text-violet-400">#</span>about-me
+    </span>
+    <span className="flex-grow border-t border-violet-400"></span>
+  </h2>
+
+  <div className="flex flex-col lg:flex-row items-center lg:items-start w-full">
+    {/* Bagian Kiri: Foto */}
+    <div className="lg:w-1/2 w-full flex justify-center lg:justify-start">
+      <img src={require('./assets/foto.png')} alt="Experience Photo" className="rounded-lg lg:w-[1200px]" />
+    </div>
+
+    {/* Bagian Kanan: Text */}
+    <div className="lg:w-1/2 w-full text-white mb-8 lg:mb-0 lg:pl-8 font-fira mt-8">
+      <a href="" target="_blank" className="text-5xl font-bold mb-1 text-violet-400 hover:underline">
+        Haekal Rahmadyan
+      </a>
+      <p className="text-[22px] mb-0">Bina Nusantara University (Undergraduate)</p>
+      <p className="mb-8">Bandung, September 2023 - August 2024</p>
+      <p className="mb-2">
+        In a collaborative project between the Bandung Institute of Technology, Bina Nusantara University (BINUS), and Terra Drone, initiated by the National Research and Innovation Agency (BRIN), I served as an assistant researcher for the BINUS Bandung team. My role as a programmer involved developing the Ground Control System for micro drones, which are used to detect cracks or damage on the CN-235 aircraft body. I was also responsible for creating the camera interface for the drone and integrating the trained model using YOLO version 8 with the GUI I had developed.
+      </p>
+      {/* Tambahkan konten teks lainnya di sini */}
+    </div>
+  </div>
+</div>
+
+
+
+      
+
+      
+
 
 
 
