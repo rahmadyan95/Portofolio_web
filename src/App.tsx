@@ -192,7 +192,7 @@ function App() {
         <div className="flex flex-col lg:flex-row items-center lg:items-start w-full">
           {/* Bagian Kiri: Text */}
           <div className="lg:w-1/2 w-full text-white mb-8 lg:mb-0 lg:pr-8 font-fira mt-8">
-            <a href="https://github.com/dekastra/GCS_Drone"  target="_blank" className="text-5xl font-bold mb-1 text-violet-400 hover:underline">
+            <a href="https://github.com/dekastra/GCS_Drone" rel="noopener noreferrer" target="_blank" className="text-5xl font-bold mb-1 text-violet-400 hover:underline">
               Research Assistant
             </a>
             <p className="text-[22px] mb-0">Badan Riset Inovasi Nasional (BRIN)</p>
@@ -241,7 +241,7 @@ function App() {
 
             <div className="mt-6">
               <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
-                <a href="https://github.com/rahmadyan95/Pothole-Detector" target="_blank">View Project &larr;&rarr;</a>
+                <a href="https://github.com/rahmadyan95/Pothole-Detector" rel="noopener noreferrer" target="_blank">View Project &larr;&rarr;</a>
               </button>
             </div>
 
@@ -267,7 +267,7 @@ function App() {
 
             <div className="mt-6">
               <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
-                <a href="https://github.com/dekastra/GCS_Drone" target="_blank">View Project &larr;&rarr;</a>
+                <a href="https://github.com/dekastra/GCS_Drone" rel="noopener noreferrer" target="_blank">View Project &larr;&rarr;</a>
               </button>
             </div>
           
@@ -295,7 +295,7 @@ function App() {
 
             <div className="mt-10">
               <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
-                <a href="https://github.com/dekastra/GCS_Drone" target="_blank">View Project &larr;&rarr;</a>
+                <a href="https://github.com/dekastra/GCS_Drone" rel="noopener noreferrer" target="_blank">View Project &larr;&rarr;</a>
               </button>
             </div>
           
@@ -320,7 +320,7 @@ function App() {
 
             <div className="mt-10">
               <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
-                <a href="https://github.com/dekastra/GCS_Drone" target="_blank">View Project &larr;&rarr;</a>
+                <a href="https://github.com/dekastra/GCS_Drone" rel="noopener noreferrer" target="_blank">View Project &larr;&rarr;</a>
               </button>
             </div>
           </div>
@@ -346,11 +346,11 @@ function App() {
             
             <div className="mt-10">
               <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300 mr-2" >
-                <a href="https://github.com/rahmadyan95/Portofolio_web" target="_blank" className=''>View Project &larr;&rarr;</a>
+                <a href="https://github.com/rahmadyan95/Portofolio_web" rel="noopener noreferrer" target="_blank" className=''>View Project &larr;&rarr;</a>
               </button>
 
               <button className="border-2 border-gray-500 text-white font-fira py-2 px-2 rounded hover:bg-purple-500 hover:text-white transition duration-300" >
-                <a href="https://portofolio-web-rho.vercel.app/" target="_blank" className=''>Live &larr;&rarr;</a>
+                <a href="https://portofolio-web-rho.vercel.app/" rel="noopener noreferrer" target="_blank" className=''>Live &larr;&rarr;</a>
               </button>
             </div>
         
@@ -376,7 +376,7 @@ function App() {
 
             <div className="mt-5">
               <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
-                <a href="https://github.com/rahmadyan95/Emergency-Autoresponder" target="_blank">View Project &larr;&rarr;</a>
+                <a href="https://github.com/rahmadyan95/Emergency-Autoresponder" rel="noopener noreferrer" target="_blank">View Project &larr;&rarr;</a>
               </button>
             </div>
           </div>
@@ -396,7 +396,7 @@ function App() {
 
             <div className="mt-5">
               <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
-                <a href="https://github.com/rahmadyan95/Simple-Hangman" target="_blank">View Project &larr;&rarr;</a>
+                <a href="https://github.com/rahmadyan95/Simple-Hangman" rel="noopener noreferrer" target="_blank">View Project &larr;&rarr;</a>
               </button>
             </div>
           </div>
@@ -420,7 +420,7 @@ function App() {
 
             <div className="mt-5">
               <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
-                <a href="https://github.com/rahmadyan95/Simple-Hangman" target="_blank">View Project &larr;&rarr;</a>
+                <a href="https://github.com/rahmadyan95/Simple-Hangman" rel="noopener noreferrer" target="_blank">View Project &larr;&rarr;</a>
               </button>
             </div>
           </div>
