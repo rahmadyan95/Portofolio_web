@@ -17,6 +17,7 @@ function Menu(e: React.MouseEvent<HTMLImageElement>) {
 let projectName = "Portfolio";
 
 function App() {
+  
   return (
     <div id='main' className=' bg-greybackground shadow'>
       {/* Sticky Header */}
@@ -49,7 +50,7 @@ function App() {
           </li>
 
           <li className='mx-4 my-5 md:my-0'>
-            <a href="#works" className="flex items-center">
+            <a href="#works" className="flex items-center" >
               <span className="text-purple-600">#</span>
               <span className="text-white hover:text-purple-600">works</span>
             </a>
@@ -184,7 +185,7 @@ function App() {
             <span className="flex-grow border-t border-violet-400"></span>
           </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg">
               <img
               src={require('./assets/pothole_detector.png')}
@@ -200,18 +201,56 @@ function App() {
               <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="TensorFlow"></img>
               <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="TensorFlow"></img>
               <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white" alt="TensorFlow"></img>
             </div>
+
+            <div className="mt-6">
+              <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
+                <a href="https://github.com/rahmadyan95/Pothole-Detector">View Project &larr;&rarr;</a>
+              </button>
+            </div>
+
           </div>
 
           <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg">
               <img
-              src={require('./assets/pothole_detector.png')}
+              src={require('./assets/drone.png')}
               alt="Project 1 Thumbnail"
               className="mb-4 w-full h-auto rounded-lg"
               />
-            <h3 className="text-xl font-fira text-white mb-2">Project 1: Drone Control System</h3>
-            <p className="text-gray-400 font-fira">A ground control system for drones that allows real-time video feed, altitude monitoring, and precise control.</p>
+            <h3 className="text-xl font-fira text-white mb-2">Damage Detector on CN-235 Aircraft Body using drones with AI</h3>
+            <p className="text-gray-400 font-fira">A ground control system for drones that allows real-time video feed and altitude monitoring.</p>
+
+            <div className='mt-4 flex flex-wrap gap-1'>
+              <img className="" src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" alt="Python"></img>
+              <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="TensorFlow"></img>
+              <img src="https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white" alt="TensorFlow"></img>
+            </div>
+
+            <div className="mt-6">
+              <button className="border-2 border-purple-500 text-white font-fira py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300">
+                <a href="https://github.com/dekastra/GCS_Drone">View Project &larr;&rarr;</a>
+              </button>
+            </div>
+          
+          
           </div>
+
+          {/* {PROJECT 3} */}
+          <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg">
+              <img
+              src={require('./assets/drone.png')}
+              alt="Project 1 Thumbnail"
+              className="mb-4 w-full h-auto rounded-lg"
+              />
+            <h3 className="text-xl font-fira text-white mb-2">Damage Detector on CN-235 Aircraft Body using drones with AI</h3>
+            <p className="text-gray-400 font-fira">A ground control system for drones that allows real-time video feed and altitude monitoring.</p>
+          </div>
+
+            
 
 
         </div>
