@@ -1,4 +1,5 @@
 import './App.css';
+import { useState, useEffect } from 'react';
 
 function Menu(e: React.MouseEvent<HTMLImageElement>) {
   const list = document.querySelector('ul');
@@ -17,6 +18,27 @@ function Menu(e: React.MouseEvent<HTMLImageElement>) {
 let projectName = "Portfolio";
 
 function App() {
+  const [imageSrc, setImageSrc] = useState("https://readme-typing-svg.demolab.com?font=Fira+Code&size=60&pause=1000&color=A78BFA&random=true&width=700&height=92&lines=Software+Engineer+;Data+Science");
+
+  useEffect(() => {
+    // Function to check window width and update the src accordingly
+    const updateImageSrc = () => {
+      if (window.innerWidth < 768) { // 768px is the default breakpoint for mobile (md)
+        setImageSrc("https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&pause=1000&color=A78BFA&center=true&random=true&width=400&height=92&lines=Software+Engineer+;Data+Science");
+      } else {
+        setImageSrc("https://readme-typing-svg.demolab.com?font=Fira+Code&size=60&pause=1000&color=A78BFA&random=true&width=700&height=92&lines=Software+Engineer+;Data+Science");
+      }
+    };
+
+    // Call function on component mount
+    updateImageSrc();
+
+    // Add event listener to handle window resizing
+    window.addEventListener('resize', updateImageSrc);
+
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener('resize', updateImageSrc);
+  }, []);
   
   return (
     <div id='main' className=' bg-greybackground shadow'>
@@ -80,105 +102,110 @@ function App() {
       </nav>
 
       <div id="home" className="bg-greybackground p-5 min-h-screen flex flex-col lg:flex-row justify-start lg:justify-between items-center lg:items-start">
-        <div className="w-[3px] bg-[#ABB2BF] h-[180px] absolute top-[40px] left-[64px] hidden lg:flex flex-col items-center justify-between"></div>
-        <div className="hidden lg:flex flex-col items-center lg:items-start lg:ml-5 lg:mt-[125px] w-full lg:w-auto">
-          {/* GitHub Logo as Button */}
-          <a href="https://github.com/rahmadyan95" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
-            <img
-              src={require('./assets/logo_github.png')}
-              alt="GitHub Logo"
-              className="h-9 w-11 rounded-full mb-1"
-            />
-          </a>
 
-          {/* Instagram Logo as Button */}
-          <a href="https://www.instagram.com/haekal_rahmadyan/profilecard/?igsh=MWxscWVmYjg3enNwYw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
-            <img
-              src={require('./assets/instagram_logo.png')}
-              alt="Instagram Logo"
-              className="h-8 w-8 mb-1"
-            />
-          </a>
+  {/* Kontainer untuk Garis Vertikal dan Ikon Media Sosial */}
+    <div className="hidden lg:flex flex-col items-center mt-[-2vh] ml-[1.5vh]">
+      {/* Garis Vertikal */}
+      <div className="w-[2px] bg-[#ABB2BF] h-[10vh] mb-2"></div>
+      
+      {/* Kontainer untuk Ikon Media Sosial */}
+      <div className="flex flex-col items-center space-y-0">
+        <a href="https://github.com/rahmadyan95" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
+          <img src={require('./assets/logo_github.png')} alt="GitHub Logo" className="h-[4vh] w-[4vh] rounded-full" /> {/* Ukuran diperkecil */}
+        </a>
+        <a href="https://www.instagram.com/haekal_rahmadyan/profilecard/?igsh=MWxscWVmYjg3enNwYw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
+          <img src={require('./assets/instagram_logo.png')} alt="Instagram Logo" className="h-[4vh] w-[4vh]" /> {/* Ukuran diperkecil */}
+        </a>
+        <a href="https://www.linkedin.com/in/haekal-rahmadyan-174506271/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
+          <img src={require('./assets/linkedin_logo.png')} alt="LinkedIn Logo" className="h-[4vh] w-[4vh]" /> {/* Ukuran diperkecil */}
+        </a>
+      </div>
+    </div>
 
-          {/* LinkedIn Logo as Button */}
-          <a href="https://www.linkedin.com/in/haekal-rahmadyan-174506271/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
-            <img
-              src={require('./assets/linkedin_logo.png')}
-              alt="LinkedIn Logo"
-              className="h-8 w-8 mb-1"
-            />
-          </a>
-        </div>
+    {/* Social Media Icons for Mobile */}
 
-        {/* Combined container for Image, Text, and Currently Working On */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-start lg:ml-[50px]">
-        {/* Lenpm i @tsparticles/reactft side: Image */}
-        <img src={require('./assets/myphoto.png')} alt="profile" className="mt-0 w-[520px] h-[520px] hidden lg:block lg:mr-5" />
+      {/* Main Content: Image and Text */}
+      <div className="flex flex-col lg:flex-row items-center lg:items-start lg:ml-[4vw] w-full">
+        {/* Left Side: Image for larger screens */}
+        <img 
+          src={require('./assets/myphoto.png')} 
+          alt="profile" 
+          className="hidden lg:block lg:mr-5 w-full max-w-[40vw] h-auto object-contain" 
+          style={{ aspectRatio: '1 / 1' }} // Optional: use aspect ratio if needed
+        />
 
-        {/* Right side: Text content and Currently Working On */}
-        <div className="flex flex-col items-center lg:items-start lg:ml-5 lg:w-[800px] lg:pr-5 lg:mt-10"> {/* Set a wider width for the text container */}
-          <h1 className="text-3xl text-white font-bold font-fira mb-2">
-            Rahmadyan is a
-          </h1>
-          <p className="text-3xl text-white font-fira text-center lg:text-left mb-3">
-            <span className="text-purple-400">Software Engineer</span> and <span className="text-purple-400">Data Science</span> <span className="text-white">Student</span>
-          </p>
-          <h1 className="text-1xl text-gray-300 font-fira text-center lg:text-left mb-5">
-            Crafting innovative solutions where data science meets software engineering
-          </h1>
-
-          {/* The box for 'Currently working on' */}
-          <div className="p-3 border-2 border-white text-center relative flex justify-center items-center w-full lg:w-[400px] h-auto lg:mt-1">
-            <h2 className="text-white text-xl z-10 font-fira">
-              Currently working on <span className="text-purple-400 font-bold">{projectName}</span>
-            </h2>
-            <div className="absolute inset-0 bg-greybackground opacity-0 z-0"></div>
-          </div>
-          <a 
-            href="https://drive.google.com/file/d/1VHGt3z-VfRIMG_g_QwW5AY_f_jjnL-Bp/view?usp=sharing" // Replace with the actual path to your CV
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-5 bg-transparent border-2 border-violet-400 text-white font-bold font-fira text-center py-2 px-4 rounded hover:bg-violet-400 hover:text-gray-900 transition duration-500"
-          >
-            Download CV
-          </a>
-          
-            {/* Social media logos for mobile only */}
-            <div className="flex justify-center mt-4 md:hidden"> {/* Only show on mobile */}
-              {/* GitHub Logo */}
-              <a href="https://github.com/rahmadyan95" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110 mx-2">
-                <img
-                  src={require('./assets/logo_github.png')}
-                  alt="GitHub Logo"
-                  className="h-10 w-10 rounded-full"
-                />
-              </a>
-
-              {/* Instagram Logo */}
-              <a href="https://www.instagram.com/haekal_rahmadyan/profilecard/?igsh=MWxscWVmYjg3enNwYw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110 mx-2">
-                <img
-                  src={require('./assets/instagram_logo.png')}
-                  alt="Instagram Logo"
-                  className="h-8 w-8"
-                />
-              </a>
-
-              {/* LinkedIn Logo */}
-              <a href="https://www.linkedin.com/in/haekal-rahmadyan-174506271/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110 mx-2">
-                <img
-                  src={require('./assets/linkedin_logo.png')}
-                  alt="LinkedIn Logo"
-                  className="h-8 w-8"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
+        {/* Right Side: Text Content and 'Currently Working On' */}
 
 
-        <img src={require('./assets/myphoto.png')} alt="profile" className="mt-5 w-83 h-83 lg:hidden" />
+        <div className="flex flex-col items-center lg:items-start lg:ml-[1vw] lg:w-[50vw] w-full lg:mt-[3vw]">
+  <h1 className="text-[6vw] lg:text-[3vw] text-white font-bold font-fira lg:mb-[2.2vw] ">Rahmadyan is a</h1>
+  
+  {/* Kontainer untuk Typing SVG */}
+  <div className="flex justify-center lg:justify-start w-full lg:mb-[-2.5vw]">
+      <a className='flex-auto lg:items-center' href="https://git.io/typing-svg">
+        <img 
+          className="mx-auto lg:mx-0 mt-[-2.5vw]"
+          src={imageSrc} 
+          alt="Typing SVG" 
+        />
+      </a>
+
+      
+    </div>
+
+    <h1 className="text-[6vw] lg:text-[2.5vw] text-white font-fira lg:mb-[2.5vw] lg:mt-5 mt-[-5.5vw]">Student</h1>
+
+    
+
+  
+  <h1 className="text-[3vw] lg:text-[1.8vw] text-gray-300 font-fira text-center lg:text-left mb-5 mt-[-1vw]">
+    Crafting innovative solutions where data science meets software engineering
+  </h1>
+
+  {/* Box for 'Currently Working On' */}
+  <div className="p-3 border-2 border-white text-center relative flex justify-center items-center w-[80vw] lg:w-[30vw] h-auto lg:mt-1">
+    <h2 className="text-[5vw] lg:text-[1.5vw] text-white font-fira">
+      Currently working on <span className="text-purple-400 font-bold">{projectName}</span>
+    </h2>
+    <div className="absolute inset-0 bg-greybackground opacity-0 z-0"></div>
+  </div>
+
+  {/* Download CV Button */}
+  <a 
+    href="https://drive.google.com/file/d/1VHGt3z-VfRIMG_g_QwW5AY_f_jjnL-Bp/view?usp=sharing" 
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-[2vh] bg-transparent border-2 border-violet-400 text-white font-bold font-fira text-center py-[2vh] px-[4vw] rounded hover:bg-violet-400 hover:text-gray-900 transition duration-500"
+  >
+    Download CV
+  </a>
+
+  {/* Social Media Icons for Mobile */}
+  <div className="flex justify-center mt-[6vh] md:hidden">
+    <a href="https://github.com/rahmadyan95" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-[2vw] transition-transform transform hover:scale-110 mx-2">
+      <img src={require('./assets/logo_github.png')} alt="GitHub Logo" className="h-[7vh] w-[7vh] rounded-full" />
+    </a>
+    <a href="https://www.instagram.com/haekal_rahmadyan/profilecard/?igsh=MWxscWVmYjg3enNwYw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-[2vw] transition-transform transform hover:scale-110 mx-2">
+      <img src={require('./assets/instagram_logo.png')} alt="Instagram Logo" className="h-[6vh] w-[6vh]" />
+    </a>
+    <a href="https://www.linkedin.com/in/haekal-rahmadyan-174506271/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-[2vw] transition-transform transform hover:scale-110 mx-2">
+      <img src={require('./assets/linkedin_logo.png')} alt="LinkedIn Logo" className="h-[6vh] w-[6vh]" />
+    </a>
+  </div>
+</div>
 
       </div>
+
+      {/* Image for mobile only */}
+      <img 
+        src={require('./assets/myphoto.png')} 
+        alt="profile" 
+        className="mt-[5vh] w-[83vw] h-auto lg:hidden object-contain" 
+        style={{ aspectRatio: '1 / 1' }} // Optional: use aspect ratio if needed
+      />
+    </div>
+
+
       {/* {Experence } */}
       <div id="experience" className="p-5 min-h-screen flex flex-col items-center lg:items-start mx-[40px]">
         <h2 className="relative text-3xl text-white font-fira mb-8 flex items-center w-full">
@@ -430,34 +457,50 @@ function App() {
       </div>
 
       <div id="experience" className="p-5 min-h-screen flex flex-col items-center lg:items-start mx-[40px]">
-  <h2 className="relative text-3xl text-white font-fira mb-8 flex items-center w-full">
-    <span className="flex-grow border-t border-violet-400"></span>
-    <span className="mx-4 flex-shrink">
-      <span className="text-violet-400">#</span>about-me
-    </span>
-    <span className="flex-grow border-t border-violet-400"></span>
-  </h2>
+        <h2 className="relative text-3xl text-white font-fira mb-8 flex items-center w-full">
+          <span className="flex-grow border-t border-violet-400"></span>
+          <span className="mx-4 flex-shrink">
+            <span className="text-violet-400">#</span>about-me
+          </span>
+          <span className="flex-grow border-t border-violet-400"></span>
+        </h2>
 
-  <div className="flex flex-col lg:flex-row items-center lg:items-start w-full">
-    {/* Bagian Kiri: Foto */}
-    <div className="lg:w-1/2 w-full flex justify-center lg:justify-start">
-      <img src={require('./assets/foto.png')} alt='fotosaya'className="rounded-lg lg:w-[1200px]" />
-    </div>
+        <div className="flex flex-col lg:flex-row items-center lg:items-start w-full">
+          {/* Bagian Kiri: Foto */}
+          <div className="lg:w-1/2 w-full flex justify-center lg:justify-start">
+            <img src={require('./assets/foto.png')} alt='fotosaya'className="rounded-lg lg:w-[1200px]" />
+          </div>
 
-    {/* Bagian Kanan: Text */}
-    <div className="lg:w-1/2 w-full text-white mb-8 lg:mb-0 lg:pl-8 font-fira mt-8">
-      <h3 rel="noopener noreferrer"  className="text-5xl font-bold mb-1 text-violet-400 hover:underline">
-        Haekal Rahmadyan
-      </h3>
-      <p className="text-[22px] mb-0">Bina Nusantara University (Undergraduate)</p>
-      <p className="mb-8">Bandung, September 2023 - August 2024</p>
-      <p className="mb-2">
-        In a collaborative project between the Bandung Institute of Technology, Bina Nusantara University (BINUS), and Terra Drone, initiated by the National Research and Innovation Agency (BRIN), I served as an assistant researcher for the BINUS Bandung team. My role as a programmer involved developing the Ground Control System for micro drones, which are used to detect cracks or damage on the CN-235 aircraft body. I was also responsible for creating the camera interface for the drone and integrating the trained model using YOLO version 8 with the GUI I had developed.
-      </p>
-      {/* Tambahkan konten teks lainnya di sini */}
-    </div>
-  </div>
-</div>
+          {/* Bagian Kanan: Text */}
+          <div className="lg:w-1/2 w-full text-white mb-8 lg:mb-0 lg:pl-8 font-fira mt-8">
+            <h3 rel="noopener noreferrer"  className="text-5xl font-bold mb-1 text-violet-400 hover:underline">
+              Haekal Rahmadyan
+            </h3>
+            <p className="text-[22px] mb-0">Bina Nusantara University (Undergraduate)</p>
+            <p className="mb-8">Bandung, September 2023 - August 2024</p>
+            <p className="mb-2">
+              In a collaborative project between the Bandung Institute of Technology, Bina Nusantara University (BINUS), and Terra Drone, initiated by the National Research and Innovation Agency (BRIN), I served as an assistant researcher for the BINUS Bandung team. My role as a programmer involved developing the Ground Control System for micro drones, which are used to detect cracks or damage on the CN-235 aircraft body. I was also responsible for creating the camera interface for the drone and integrating the trained model using YOLO version 8 with the GUI I had developed.
+            </p>
+            {/* Tambahkan konten teks lainnya di sini */}
+          </div>
+        </div>
+      </div>
+
+      <footer className="w-screen shadow-lg border-t-gray-500 border-t-2 py-6 mt-8">
+        <div className="flex flex-col lg:flex-row justify-between items-center text-white px-4 lg:px-8 w-full">
+          {/* Left Section: Links */}
+          <div className="text-center lg:text-left mb-4 lg:mb-0 w-full lg:w-1/2">
+            <img src={require('./assets/porto_logo.png')} alt='gambarfooter'  />
+          </div>
+
+          {/* Right Section: Contact */}
+          <div className="text-center lg:text-right w-full lg:w-1/2">
+           
+          </div>
+        </div>
+      </footer>
+
+
 
 
 
