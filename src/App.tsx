@@ -50,11 +50,14 @@ function App() {
       <nav className='p-5 bg-greybackground shadow md:flex md:items-center md:justify-between sticky top-0 z-20'>
         <div className='flex justify-between items-center md:ml-4'>
           <span className='text-2xl font-fira cursor-pointer text-white'>
+            <Link to="main" spy={true} smooth={true} offset={0} duration={400}>
             <img src={require('./assets/logo.png')} alt="logo" className="inline h-11 mr-2" />
             Rahmadyan
+            </Link>
           </span>
 
           <span className='text-3xl cursor-pointer md:hidden block'>
+            
             <img
               src={require('./assets/menu.png')}
               alt="menulogo"
@@ -97,10 +100,10 @@ function App() {
           </li>
 
           <li className='mx-4 my-5 md:my-0'>
-            <a href="#home" className="flex items-center">
+            <Link to="footer" spy={true} smooth={true} offset={-20} duration={400} className="flex items-center">
               <span className="text-purple-600">#</span>
               <span className="text-white hover:text-purple-600">contacts</span>
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
@@ -119,7 +122,7 @@ function App() {
             <a href="https://www.instagram.com/haekal_rahmadyan/profilecard/?igsh=MWxscWVmYjg3enNwYw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
               <img src={require('./assets/instagram_logo.png')} alt="Instagram Logo" className="h-[4vh] w-[4vh]" /> {/* Ukuran diperkecil */}
             </a>
-            <a href="https://www.linkedin.com/in/haekal-rahmadyan-174506271/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
+            <a href="https://www.linkedin.com/in/muhammad-haekal-aditya-rahmadyan-174506271/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
               <img src={require('./assets/linkedin_logo.png')} alt="LinkedIn Logo" className="h-[4vh] w-[4vh]" /> {/* Ukuran diperkecil */}
             </a>
           </div>
@@ -152,8 +155,6 @@ function App() {
                   alt="Typing SVG" 
                 />
               </a>
-
-              
             </div>
 
     <h1 className="text-[6vw] lg:text-[2.5vw] text-white font-fira lg:mb-[2.5vw] lg:mt-1.5 mt-[-5.5vw]">Student</h1>
@@ -191,7 +192,7 @@ function App() {
       <a href="https://www.instagram.com/haekal_rahmadyan/profilecard/?igsh=MWxscWVmYjg3enNwYw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-[2vw] transition-transform transform hover:scale-110 mx-2">
         <img src={require('./assets/instagram_logo.png')} alt="Instagram Logo" className="h-[6vh] w-[6vh]" />
       </a>
-      <a href="https://www.linkedin.com/in/haekal-rahmadyan-174506271/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-[2vw] transition-transform transform hover:scale-110 mx-2">
+      <a href="https://www.linkedin.com/in/muhammad-haekal-aditya-rahmadyan-174506271/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-[2vw] transition-transform transform hover:scale-110 mx-2">
         <img src={require('./assets/linkedin_logo.png')} alt="LinkedIn Logo" className="h-[6vh] w-[6vh]" />
       </a>
     </div>
@@ -567,20 +568,6 @@ function App() {
 
      
 
-      
-
-
-      
-
-
-
-
-
-
-
-
-
-
       {/* About me */}
 
       <div id="about-me" className="p-5 min-h-screen flex flex-col items-center lg:items-start mx-[40px] mt-0"> {/* Margin atas diatur ke 0 */}
@@ -594,12 +581,12 @@ function App() {
 
         <div className="flex flex-col lg:flex-row items-center lg:items-start w-full">
           {/* Bagian Kiri: Foto */}
-          <div className="lg:w-1/2 w-full flex justify-center lg:justify-start mb-2 lg:mb-0">
-            <img src={require('./assets/Haekal.png')} alt='fotosaya' className="rounded-lg lg:w-[650px] max-w-full h-auto" />
+          <div className="lg:w-1/2 w-full flex justify-center lg:justify-start mb-2 lg:mb-0 lg:ml-10">
+            <img src={require('./assets/Haekal.png')} alt='fotosaya' className="rounded-lg lg:w-[550px] max-w-full h-auto" />
           </div>
 
           {/* Bagian Kanan: Text */}
-          <div className="lg:w-1/2 w-full text-white lg:pl-4 font-fira mt-4 lg:mt-0">
+          <div className="lg:w-1/2 w-full text-white lg:pl- font-fira mt-4 lg:mt-0">
             <h3 className="text-[6.5vw] lg:text-[4vw] font-bold mb-1 text-violet-400 hover:underline">
               Haekal Rahmadyan
             </h3>
@@ -614,19 +601,69 @@ function App() {
       </div>
 
 
-      <footer className="w-screen shadow-lg border-t-gray-500 border-t-2 py-6 mt-8">
-        <div className="flex flex-col lg:flex-row justify-between items-center text-white px-4 lg:px-8 w-full">
-          {/* Left Section: Links */}
-          <div className="text-center lg:text-left mb-4 lg:mb-0 w-full lg:w-1/2">
-            <img src={require('./assets/porto_logo.png')} alt='gambarfooter'  />
-          </div>
+      {/* Footer Atas */}
+{/* Footer Atas */}
+{/* Footer Atas */}
+<footer className="w-screen shadow-lg border-t-gray-500 border-t-2 py-6 mt-8">
+  <div id="footer" className="flex flex-col lg:flex-row justify-between items-center text-white px-4 lg:px-8 w-full">
+    
+    {/* Left Section: Logo and Tagline */}
+    <div className="text-center lg:text-left mb-4 lg:mb-0 w-full lg:w-1/2">
+      <img src={require('./assets/porto_logo.png')} alt='gambarfooter' className='lg:w-[25vw]' />
+    </div>
 
-          {/* Right Section: Contact */}
-          <div className="text-center lg:text-right w-full lg:w-1/2">
-           
-          </div>
-        </div>
-      </footer>
+    {/* Right Section: Media Links */}
+    <div className="flex flex-col items-center lg:items-end w-full lg:w-1/2">
+      {/* Title: Media */}
+      <p className="font-fira text-[4vw] lg:text-[2vw] text-center lg:text-left text-lg mb-4 lg:mb-7 lg:mr-12">Media</p>
+      
+      {/* Media Logos */}
+      <div className="flex justify-center lg:justify-center space-x-6">
+        {/* Instagram */}
+        <a href="https://www.instagram.com/haekal_rahmadyan/profilecard/?igsh=MWxscWVmYjg3enNwYw%3D%3D" target="_blank" rel="noopener noreferrer">
+          <img 
+            src={require('./assets/instagram_logo.png')} 
+            alt="Instagram" 
+            className="w-8 h-8 transition-transform transform hover:scale-110" 
+          />
+        </a>
+        {/* Email */}
+        <a href="mailto:haekal.rahmadyan95@gmail.com">
+          <img 
+            src={require('./assets/email.png')} 
+            alt="Email" 
+            className="w-8 h-8 transition-transform transform hover:scale-110" 
+          />
+        </a>
+        {/* LinkedIn */}
+        <a href="https://www.linkedin.com/in/muhammad-haekal-aditya-rahmadyan-174506271/" target="_blank" rel="noopener noreferrer">
+          <img 
+            src={require('./assets/linkedin_logo.png')} 
+            alt="LinkedIn" 
+            className="w-8 h-8 transition-transform transform hover:scale-110" 
+          />
+        </a>
+        {/* GitHub */}
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <img 
+            src={require('./assets/logo_github.png')} 
+            alt="GitHub" 
+            className="w-8 h-8 transition-transform transform hover:scale-110" 
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{/* Footer Bawah */}
+<footer  className="w-screen bg-gray-800 py-4">
+  <div className="text-center text-gray-400 text-sm">
+    &copy; 2024 Rahmadyan. All rights reserved.
+  </div>
+</footer>
+
+
 
 
 
