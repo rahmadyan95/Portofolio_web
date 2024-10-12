@@ -1,8 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import {Link} from 'react-scroll';
-import ParticleBg from './components/ParticleBg';
-
 
 function Menu(e: React.MouseEvent<HTMLImageElement>) {
   const list = document.querySelector('ul');
@@ -108,7 +106,6 @@ function App() {
       </nav>
 
       <div id="home" className="bg-greybackground p-5 flex flex-col lg:flex-row justify-start lg:justify-between items-center lg:items-start mb-[3vw]">
-      <ParticleBg/>
       {/* Kontainer untuk Garis Vertikal dan Ikon Media Sosial */}
         <div className="hidden lg:flex flex-col items-center mt-[-2vh] ml-[1.5vh]">
           {/* Garis Vertikal */}
