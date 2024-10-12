@@ -1,5 +1,8 @@
 import './App.css';
 import { useState, useEffect } from 'react';
+import {Link} from 'react-scroll';
+import ParticleBg from './components/ParticleBg';
+
 
 function Menu(e: React.MouseEvent<HTMLImageElement>) {
   const list = document.querySelector('ul');
@@ -18,6 +21,9 @@ function Menu(e: React.MouseEvent<HTMLImageElement>) {
 let projectName = "Portfolio";
 
 function App() {
+
+
+  
   const [imageSrc, setImageSrc] = useState("https://readme-typing-svg.demolab.com?font=Fira+Code&size=60&pause=1000&color=A78BFA&random=true&width=700&height=92&lines=Software+Engineer+;Data+Science");
 
   useEffect(() => {
@@ -65,31 +71,31 @@ function App() {
           md:static absolute bg-greybackground w-full left-0 md:w-auto md:py-0 py-4 md:pl-0
           pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500'>
           <li className='mx-4 my-5 md:my-0 '>
-            <a href="#main" className="">
+            <Link to="main" spy={true} smooth={true} offset={0} duration={400}>
               <span className="text-purple-600">#</span>
               <span className="text-white hover:text-purple-600">home</span>
-            </a>
+            </Link>
           </li>
 
           <li className='mx-4 my-5 md:my-0'>
-            <a href="#experience" className="flex items-center" >
+            <Link to="experience" spy={true} smooth={true} offset={-80} duration={400} className="flex items-center" >
               <span className="text-purple-600">#</span>
               <span className="text-white hover:text-purple-600">experience</span>
-            </a>
+            </Link>
           </li>
 
           <li className='mx-4 my-5 md:my-0'>
-            <a href="#works" className="flex items-center" >
+            <Link to="works" spy={true} smooth={true} offset={-80} duration={400} className="flex items-center" >
               <span className="text-purple-600">#</span>
               <span className="text-white hover:text-purple-600">works</span>
-            </a>
+            </Link>
           </li>
 
           <li className='mx-4 my-5 md:my-0'>
-            <a href="#home" className="flex items-center">
+            <Link spy={true} smooth={true} offset={-80} duration={400} to="about-me" className="flex items-center">
               <span className="text-purple-600">#</span>
               <span className="text-white hover:text-purple-600">about-me</span>
-            </a>
+            </Link>
           </li>
 
           <li className='mx-4 my-5 md:my-0'>
@@ -101,26 +107,26 @@ function App() {
         </ul>
       </nav>
 
-      <div id="home" className="bg-greybackground p-5 min-h-screen flex flex-col lg:flex-row justify-start lg:justify-between items-center lg:items-start">
-
-  {/* Kontainer untuk Garis Vertikal dan Ikon Media Sosial */}
-    <div className="hidden lg:flex flex-col items-center mt-[-2vh] ml-[1.5vh]">
-      {/* Garis Vertikal */}
-      <div className="w-[2px] bg-[#ABB2BF] h-[10vh] mb-2"></div>
-      
-      {/* Kontainer untuk Ikon Media Sosial */}
-      <div className="flex flex-col items-center space-y-0">
-        <a href="https://github.com/rahmadyan95" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
-          <img src={require('./assets/logo_github.png')} alt="GitHub Logo" className="h-[4vh] w-[4vh] rounded-full" /> {/* Ukuran diperkecil */}
-        </a>
-        <a href="https://www.instagram.com/haekal_rahmadyan/profilecard/?igsh=MWxscWVmYjg3enNwYw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
-          <img src={require('./assets/instagram_logo.png')} alt="Instagram Logo" className="h-[4vh] w-[4vh]" /> {/* Ukuran diperkecil */}
-        </a>
-        <a href="https://www.linkedin.com/in/haekal-rahmadyan-174506271/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
-          <img src={require('./assets/linkedin_logo.png')} alt="LinkedIn Logo" className="h-[4vh] w-[4vh]" /> {/* Ukuran diperkecil */}
-        </a>
-      </div>
-    </div>
+      <div id="home" className="bg-greybackground p-5 flex flex-col lg:flex-row justify-start lg:justify-between items-center lg:items-start mb-[3vw]">
+      <ParticleBg/>
+      {/* Kontainer untuk Garis Vertikal dan Ikon Media Sosial */}
+        <div className="hidden lg:flex flex-col items-center mt-[-2vh] ml-[1.5vh]">
+          {/* Garis Vertikal */}
+          <div className="w-[2px] bg-[#ABB2BF] h-[10vh] mb-2"></div>
+          
+          {/* Kontainer untuk Ikon Media Sosial */}
+          <div className="flex flex-col items-center space-y-0">
+            <a href="https://github.com/rahmadyan95" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
+              <img src={require('./assets/logo_github.png')} alt="GitHub Logo" className="h-[4vh] w-[4vh] rounded-full" /> {/* Ukuran diperkecil */}
+            </a>
+            <a href="https://www.instagram.com/haekal_rahmadyan/profilecard/?igsh=MWxscWVmYjg3enNwYw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
+              <img src={require('./assets/instagram_logo.png')} alt="Instagram Logo" className="h-[4vh] w-[4vh]" /> {/* Ukuran diperkecil */}
+            </a>
+            <a href="https://www.linkedin.com/in/haekal-rahmadyan-174506271/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-2 transition-transform transform hover:scale-110">
+              <img src={require('./assets/linkedin_logo.png')} alt="LinkedIn Logo" className="h-[4vh] w-[4vh]" /> {/* Ukuran diperkecil */}
+            </a>
+          </div>
+        </div>
 
     {/* Social Media Icons for Mobile */}
 
@@ -138,22 +144,22 @@ function App() {
 
 
         <div className="flex flex-col items-center lg:items-start lg:ml-[1vw] lg:w-[50vw] w-full lg:mt-[3vw]">
-  <h1 className="text-[6vw] lg:text-[3vw] text-white font-bold font-fira lg:mb-[2.2vw] ">Rahmadyan is a</h1>
-  
-  {/* Kontainer untuk Typing SVG */}
-  <div className="flex justify-center lg:justify-start w-full lg:mb-[-2.5vw]">
-      <a className='flex-auto lg:items-center' href="https://git.io/typing-svg">
-        <img 
-          className="mx-auto lg:mx-0 mt-[-2.5vw]"
-          src={imageSrc} 
-          alt="Typing SVG" 
-        />
-      </a>
+          <h1 className="text-[6vw] lg:text-[3vw] text-white font-bold font-fira lg:mb-[2.2vw] ">Rahmadyan is a</h1>
+          
+          {/* Kontainer untuk Typing SVG */}
+          <div className="flex justify-center lg:justify-start w-full lg:mb-[-2.5vw]">
+              <a className='flex-auto lg:items-center' href="https://git.io/typing-svg">
+                <img 
+                  className="mx-auto lg:mx-0 mt-[-2.5vw]"
+                  src={imageSrc} 
+                  alt="Typing SVG" 
+                />
+              </a>
 
-      
-    </div>
+              
+            </div>
 
-    <h1 className="text-[6vw] lg:text-[2.5vw] text-white font-fira lg:mb-[2.5vw] lg:mt-5 mt-[-5.5vw]">Student</h1>
+    <h1 className="text-[6vw] lg:text-[2.5vw] text-white font-fira lg:mb-[2.5vw] lg:mt-1.5 mt-[-5.5vw]">Student</h1>
 
     
 
@@ -181,18 +187,18 @@ function App() {
   </a>
 
   {/* Social Media Icons for Mobile */}
-  <div className="flex justify-center mt-[6vh] md:hidden">
-    <a href="https://github.com/rahmadyan95" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-[2vw] transition-transform transform hover:scale-110 mx-2">
-      <img src={require('./assets/logo_github.png')} alt="GitHub Logo" className="h-[7vh] w-[7vh] rounded-full" />
-    </a>
-    <a href="https://www.instagram.com/haekal_rahmadyan/profilecard/?igsh=MWxscWVmYjg3enNwYw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-[2vw] transition-transform transform hover:scale-110 mx-2">
-      <img src={require('./assets/instagram_logo.png')} alt="Instagram Logo" className="h-[6vh] w-[6vh]" />
-    </a>
-    <a href="https://www.linkedin.com/in/haekal-rahmadyan-174506271/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-[2vw] transition-transform transform hover:scale-110 mx-2">
-      <img src={require('./assets/linkedin_logo.png')} alt="LinkedIn Logo" className="h-[6vh] w-[6vh]" />
-    </a>
+    <div className="flex justify-center mt-[6vh] md:hidden">
+      <a href="https://github.com/rahmadyan95" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-[2vw] transition-transform transform hover:scale-110 mx-2">
+        <img src={require('./assets/logo_github.png')} alt="GitHub Logo" className="h-[7vh] w-[7vh] rounded-full" />
+      </a>
+      <a href="https://www.instagram.com/haekal_rahmadyan/profilecard/?igsh=MWxscWVmYjg3enNwYw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-[2vw] transition-transform transform hover:scale-110 mx-2">
+        <img src={require('./assets/instagram_logo.png')} alt="Instagram Logo" className="h-[6vh] w-[6vh]" />
+      </a>
+      <a href="https://www.linkedin.com/in/haekal-rahmadyan-174506271/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-[2vw] transition-transform transform hover:scale-110 mx-2">
+        <img src={require('./assets/linkedin_logo.png')} alt="LinkedIn Logo" className="h-[6vh] w-[6vh]" />
+      </a>
+    </div>
   </div>
-</div>
 
       </div>
 
@@ -207,7 +213,7 @@ function App() {
 
 
       {/* {Experence } */}
-      <div id="experience" className="p-5 min-h-screen flex flex-col items-center lg:items-start mx-[40px]">
+      <div id="experience" className="p-5 min-h-screen flex flex-col items-center lg:items-start mx-[40px] mt-0 lg:mb-[-100px]">
         <h2 className="relative text-3xl text-white font-fira mb-8 flex items-center w-full">
           <span className="flex-grow border-t border-violet-400"></span>
           <span className="mx-4 flex-shrink">
@@ -218,13 +224,13 @@ function App() {
 
         <div className="flex flex-col lg:flex-row items-center lg:items-start w-full">
           {/* Bagian Kiri: Text */}
-          <div className="lg:w-1/2 w-full text-white mb-8 lg:mb-0 lg:pr-8 font-fira mt-8">
-            <a href="https://github.com/dekastra/GCS_Drone" rel="noopener noreferrer" target="_blank" className="text-5xl font-bold mb-1 text-violet-400 hover:underline">
+          <div className="lg:w-1/2 w-full text-white mb-8 lg:mb-0 lg:pr-8 font-fira lg:mt-8">
+            <a href="https://github.com/dekastra/GCS_Drone" rel="noopener noreferrer" target="_blank" className="text-[6.5vw] lg:text-[4vw] font-bold mb-1 text-violet-400 hover:underline">
               Research Assistant
             </a>
-            <p className="text-[22px] mb-0">Badan Riset Inovasi Nasional (BRIN)</p>
-            <p className="mb-8">Bandung, September 2023 - August 2024</p>
-            <p className="mb-2">In a collaborative project between the Bandung Institute of Technology, Bina Nusantara University (BINUS), and Terra Drone, initiated by the National Research and Innovation Agency (BRIN), I served as an assistant researcher for the BINUS Bandung team. My role as a programmer involved developing the Ground Control System for micro drones, which are used to detect cracks or damage on the CN-235 aircraft body. I was also responsible for creating the camera interface for the drone and integrating the trained model using YOLO version 8 with the GUI I had developed.</p>
+            <p className="md:text-[1.6vw] text-[3.2vw] mb-0">Badan Riset Inovasi Nasional (BRIN)</p>
+            <p className="mb-8 md:text-[1.2vw] text-[2.5vw]">Bandung, September 2023 - August 2024</p>
+            <p className="mb-2 md:text-[3.5vw] lg:text-[1.3vw]">In a collaborative project between the Bandung Institute of Technology, Bina Nusantara University (BINUS), and Terra Drone, initiated by the National Research and Innovation Agency (BRIN), I served as an assistant researcher for the BINUS Bandung team. My role as a programmer involved developing the Ground Control System for micro drones, which are used to detect cracks or damage on the CN-235 aircraft body. I was also responsible for creating the camera interface for the drone and integrating the trained model using YOLO version 8 with the GUI I had developed.</p>
             {/* Tambahkan konten teks lainnya di sini */}
           </div>
 
@@ -456,7 +462,131 @@ function App() {
         </div>
       </div>
 
-      <div id="experience" className="p-5 min-h-screen flex flex-col items-center lg:items-start mx-[40px]">
+      {/* Certificate */}
+
+      <div id="Certificate" className="p-5 flex flex-col items-center lg:items-start mx-[40px] mb-0">{/* Margin bawah diatur ke 0 */}
+  <h2 className="relative text-3xl text-white font-fira mb-8 flex items-center w-full">
+    <span className="flex-grow border-t border-violet-400"></span>
+    <span className="mx-4 flex-shrink">
+      <span className="text-violet-400">#</span>Certificate
+    </span>
+    <span className="flex-grow border-t border-violet-400"></span>
+  </h2>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+    {/* Kolom 1 */}
+    <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg flex flex-col md:flex-row items-start">
+      <div className="flex justify-center mb-2 md:mb-0 md:mr-4">
+        <img
+          src={require('./assets/Microsoft_logo.png')}
+          alt="Certificate Thumbnail"
+          className="w-[80px] h-auto md:w-[200px]" // Ukuran gambar yang lebih kecil
+        />
+      </div>
+      <div className="text-left flex-grow">
+        <a 
+          href='https://www.coursera.org/account/accomplishments/verify/ZJT8CP7Q6X72' 
+          rel="noopener noreferrer" 
+          target="_blank" 
+          className="hover:underline text-[3vw] md:text-[1.05vw] font-fira text-white mb-2"
+        >
+          Build a computer vision app with Azure Cognitive Services
+        </a>
+        <p className="text-gray-400 font-fira text-[2.5vw] md:text-[1vw]">Microsoft</p>
+        <p className="text-gray-400 font-fira text-[2.5vw] md:text-[1vw]">ZJT8CP7Q6X72</p>
+      </div>
+    </div>
+
+    {/* Kolom 2 */}
+    <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg flex flex-col md:flex-row items-start">
+      <div className="flex justify-center mb-2 md:mb-0 md:mr-4">
+        <img
+          src={require('./assets/freecodecamp.png')}
+          alt="Certificate Thumbnail"
+          className="w-[80px] h-auto md:w-[150px]" // Ukuran gambar yang lebih kecil
+        />
+      </div>
+      <div className="text-left flex-grow">
+        <a 
+          href='https://www.freecodecamp.org/certification/rahmadyan2004/foundational-c-sharp-with-microsoft' 
+          rel="noopener noreferrer" 
+          target="_blank" 
+          className="hover:underline text-[3vw] md:text-[1.05vw] font-fira text-white mb-2"
+        >
+          Foundational C# with Microsoft
+        </a>
+        <p className="text-gray-400 font-fira text-[2.5vw] md:text-[1vw]">Microsoft & FreeCodeCamp</p>
+        <p className="text-gray-400 font-fira text-[2.5vw] md:text-[1vw]">rahmadyan2004-mlwp</p>
+      </div>
+    </div>
+
+    {/* Kolom 3 */}
+    <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg flex flex-col md:flex-row items-start">
+      <div className="flex justify-center mb-2 md:mb-0 md:mr-4">
+        <img
+          src={require('./assets/freecodecamp.png')}
+          alt="Certificate Thumbnail"
+          className="w-[80px] h-auto md:w-[150px]" // Ukuran gambar yang lebih kecil
+        />
+      </div>
+      <div className="text-left flex-grow">
+        <a 
+          href='https://www.freecodecamp.org/certification/rahmadyan2004/machine-learning-with-python-v7' 
+          rel="noopener noreferrer" 
+          target="_blank" 
+          className="hover:underline text-[3vw] md:text-[1.05vw] font-fira text-white mb-2"
+        >
+          Machine Learning with Python
+        </a>
+        <p className="text-gray-400 font-fira text-[2.5vw] md:text-[1vw]">FreeCodeCamp</p>
+        <p className="text-gray-400 font-fira text-[2.5vw] md:text-[1vw]">rahmadyan2004-fcswm</p>
+      </div>
+    </div>
+
+    <div className="bg-[#1E1E1E] p-5 rounded-lg shadow-lg flex flex-col md:flex-row items-start">
+      <div className="flex justify-center mb-2 md:mb-0 md:mr-4">
+        <img
+          src={require('./assets/Dlink.png')}
+          alt="Certificate Thumbnail"
+          className="w-[80px] h-auto md:w-[150px]" // Ukuran gambar yang lebih kecil
+        />
+      </div>
+      <div className="text-left flex-grow">
+        <a 
+          href='https://drive.google.com/file/d/1Gb_WkC9ZQc05QaAs1AVjuV4V3-t1HoV4/view?usp=sharing' 
+          rel="noopener noreferrer" 
+          target="_blank" 
+          className="hover:underline text-[3vw] md:text-[1.05vw] font-fira text-white mb-2"
+        >
+          
+          D-Link Certified Network Design Associate (DCNA)
+        </a>
+        <p className="text-gray-400 font-fira text-[2.5vw] md:text-[1vw]">Dlink</p>
+        <p className="text-gray-400 font-fira text-[2.5vw] md:text-[1vw]"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+     
+
+      
+
+
+      
+
+
+
+
+
+
+
+
+
+
+      {/* About me */}
+
+      <div id="about-me" className="p-5 min-h-screen flex flex-col items-center lg:items-start mx-[40px] mt-0"> {/* Margin atas diatur ke 0 */}
         <h2 className="relative text-3xl text-white font-fira mb-8 flex items-center w-full">
           <span className="flex-grow border-t border-violet-400"></span>
           <span className="mx-4 flex-shrink">
@@ -467,24 +597,25 @@ function App() {
 
         <div className="flex flex-col lg:flex-row items-center lg:items-start w-full">
           {/* Bagian Kiri: Foto */}
-          <div className="lg:w-1/2 w-full flex justify-center lg:justify-start">
-            <img src={require('./assets/foto.png')} alt='fotosaya'className="rounded-lg lg:w-[1200px]" />
+          <div className="lg:w-1/2 w-full flex justify-center lg:justify-start mb-2 lg:mb-0">
+            <img src={require('./assets/Haekal.png')} alt='fotosaya' className="rounded-lg lg:w-[650px] max-w-full h-auto" />
           </div>
 
           {/* Bagian Kanan: Text */}
-          <div className="lg:w-1/2 w-full text-white mb-8 lg:mb-0 lg:pl-8 font-fira mt-8">
-            <h3 rel="noopener noreferrer"  className="text-5xl font-bold mb-1 text-violet-400 hover:underline">
+          <div className="lg:w-1/2 w-full text-white lg:pl-4 font-fira mt-4 lg:mt-0">
+            <h3 className="text-[6.5vw] lg:text-[4vw] font-bold mb-1 text-violet-400 hover:underline">
               Haekal Rahmadyan
             </h3>
-            <p className="text-[22px] mb-0">Bina Nusantara University (Undergraduate)</p>
-            <p className="mb-8">Bandung, September 2023 - August 2024</p>
-            <p className="mb-2">
-              In a collaborative project between the Bandung Institute of Technology, Bina Nusantara University (BINUS), and Terra Drone, initiated by the National Research and Innovation Agency (BRIN), I served as an assistant researcher for the BINUS Bandung team. My role as a programmer involved developing the Ground Control System for micro drones, which are used to detect cracks or damage on the CN-235 aircraft body. I was also responsible for creating the camera interface for the drone and integrating the trained model using YOLO version 8 with the GUI I had developed.
+            <p className="md:text-[1.6vw] text-[3.2vw] mb-0">Bina Nusantara University (Undergraduate)</p>
+            <p className="mb-4 md:text-[1.2vw] text-[2.5vw]">July 2022 - Present</p>
+            <p className="mb-2 md:text-[3.5vw] lg:text-[1.1vw]">
+              My name is Muhammad Haekal Aditya Rahmadyan, a dedicated Data Science student at Bina Nusantara University with a strong passion for both software engineering and data science. I pride myself on being a reliable team player, known for my diligence and high integrity in every project I undertake. My technical expertise spans a wide range of technologies, including operating systems like Arch Linux, Ubuntu, Debian, and Windows; programming languages such as Python, Java, R, C, C++, C#, Scala, and TypeScript; and frameworks like React, Tailwind CSS, Django, and TensorFlow. I also have strong skills in database management with PostgreSQL, web development using HTML5 and CSS3, and shell scripting with PowerShell and Bash. With a solid foundation in these technologies, I am eager to apply my knowledge and continue growing professionally by contributing to innovative projects within your organization.
             </p>
             {/* Tambahkan konten teks lainnya di sini */}
           </div>
         </div>
       </div>
+
 
       <footer className="w-screen shadow-lg border-t-gray-500 border-t-2 py-6 mt-8">
         <div className="flex flex-col lg:flex-row justify-between items-center text-white px-4 lg:px-8 w-full">
