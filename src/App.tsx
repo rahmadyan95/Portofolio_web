@@ -105,7 +105,7 @@ function App() {
         </ul>
       </nav>
 
-      <div id="home" className="bg-greybackground p-5 flex flex-col lg:flex-row justify-start lg:justify-between items-center lg:items-start mb-[3vw]">
+      <div id="home" className="bg-greybackground min-h-screen p-5 flex flex-col lg:flex-row justify-start lg:justify-between items-center lg:items-start mb-[3vw]">
       {/* Kontainer untuk Garis Vertikal dan Ikon Media Sosial */}
         <div className="hidden lg:flex flex-col items-center mt-[-2vh] ml-[1.5vh]">
           {/* Garis Vertikal */}
