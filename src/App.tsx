@@ -260,7 +260,7 @@ function App() {
               className="mb-4 w-full h-auto rounded-lg"
               />
             <h3 className="text-xl font-fira text-white mb-2">Pothole Detector</h3>
-            <p className="text-gray-400 font-fira ">A ground control system for drones that allows real-time video feed, altitude monitoring, and precise control.</p>
+            <p className="text-gray-400 font-fira ">The Pothole Detector is an application designed to identify road potholes by assigning a unique identifier to each pothole, annotating them with coordinates based on their IP address, recording the timestamp of detection, and capturing photographs of each detected pothole. This program is implemented using Python, OpenCV, and YOLOv8.</p>
             <div className='mt-4 flex flex-wrap gap-1'>
               <img className="" src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" alt="Python"></img>
               <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt="TensorFlow"></img>
@@ -286,7 +286,7 @@ function App() {
               className="mb-4 w-full h-auto rounded-lg"
               />
             <h3 className="text-xl font-fira text-white mb-2">Damage Detector on CN-235 Aircraft Body using drones with AI</h3>
-            <p className="text-gray-400 font-fira">A ground control system for drones that allows real-time video feed and altitude monitoring.</p>
+            <p className="text-gray-400 font-fira">A ground control system for drones provides real-time video feeds and altitude monitoring, crucial for inspections, mapping, and surveillance. It streams live video from the drone's camera while continuously tracking altitude with onboard sensors. This integration allows operators to make informed decisions, enhancing control and safety during missions.</p>
 
             <div className='mt-4 flex flex-wrap gap-1'>
               <img className="" src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" alt="Python"></img>
