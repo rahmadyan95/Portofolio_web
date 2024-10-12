@@ -608,9 +608,13 @@ function App() {
   <div id="footer" className="flex flex-col lg:flex-row justify-between items-center text-white px-4 lg:px-8 w-full">
     
     {/* Left Section: Logo and Tagline */}
+    
     <div className="text-center lg:text-left mb-4 lg:mb-0 w-full lg:w-1/2">
-      <img src={require('./assets/porto_logo.png')} alt='gambarfooter' className='lg:w-[25vw]' />
+      <Link to="main" spy={true} smooth={true} offset={0} duration={400}>
+        <img src={require('./assets/porto_logo.png')} alt='gambarfooter' className='lg:w-[25vw]' />
+      </Link>
     </div>
+    
 
     {/* Right Section: Media Links */}
     <div className="flex flex-col items-center lg:items-end w-full lg:w-1/2">
