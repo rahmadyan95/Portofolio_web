@@ -176,7 +176,7 @@ function App() {
 
   {/* Download CV Button */}
   <a 
-    href="https://drive.google.com/file/d/1VHGt3z-VfRIMG_g_QwW5AY_f_jjnL-Bp/view?usp=sharing" 
+    href="https://drive.google.com/file/d/1757n6qMBId6aNZfAV2Nu0yV_4DxZ2C7V/view?usp=sharing" 
     target="_blank"
     rel="noopener noreferrer"
     className="mt-[2vh] bg-transparent border-2 border-violet-400 text-white font-bold font-fira text-center py-[2vh] px-[4vw] rounded hover:bg-violet-400 hover:text-gray-900 transition duration-500"
